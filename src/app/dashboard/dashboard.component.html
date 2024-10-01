@@ -1,0 +1,31 @@
+<!-- <div class="dashboard">
+    <h2>My Day-to-Day Life Dashboard</h2>
+    <app-task-manager></app-task-manager>
+    <app-calendar></app-calendar>
+    <app-notes></app-notes>
+  </div> -->
+  
+  <div class="dashboard">
+    <h2 class="dashboard-title">Welcome to Your Dashboard</h2>
+    <div class="dashboard-buttons">
+        <div class="dashboard-card" (click)="navigateTo1('task-manager')">
+            <div class="dashboard-icon">
+                <i class="fas fa-tasks"></i> <!-- Task Manager Icon -->
+            </div>
+            <h3>Task Manager</h3>
+        </div>
+        <div class="dashboard-card" (click)="navigateTo2('notes')">
+            <div class="dashboard-icon">
+                <i class="fas fa-sticky-note"></i> <!-- Notes Icon -->
+            </div>
+            <h3>Notes</h3>
+        </div>
+        <div class="dashboard-card" (click)="navigateTo3('calendar')">
+            <div class="dashboard-icon">
+                <i class="fas fa-calendar-alt"></i> <!-- Calendar Icon -->
+            </div>
+            <h3>Events</h3>
+        </div>
+    </div>
+</div>
+

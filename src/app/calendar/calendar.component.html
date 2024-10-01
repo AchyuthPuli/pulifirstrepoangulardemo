@@ -1,0 +1,14 @@
+<div class="calendar">
+    <h3>Calendar</h3>
+    <form (submit)="addEvent()" class="calendar-form">
+        <input type="text" [(ngModel)]="newEvent.title" placeholder="Event Title" required />
+        <input type="date" [(ngModel)]="newEvent.date" required />
+        <button type="submit" class="add-event-btn">Add Event</button>
+    </form>
+    <ul class="event-list">
+        <li *ngFor="let event of events" class="event-item">
+            <span>{{ event.date }} - {{ event.title }}</span>
+            <button (click)="deleteEvent(event.id)" class="delete-event-btn">Delete</button>
+        </li>
+    </ul>
+</div>

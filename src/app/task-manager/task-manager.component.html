@@ -1,0 +1,18 @@
+<div class="task-manager">
+    <h3>Task Manager</h3>
+    <form (submit)="addTask()" class="task-form">
+      <input type="text" [(ngModel)]="newTask.title" name="title" placeholder="Task Title" required />
+      <input type="text" [(ngModel)]="newTask.description" name="description" placeholder="Task Description" />
+      <input type="date" [(ngModel)]="newTask.dueDate" name="dueDate" />
+      <button type="submit" class="add-task-btn">Add Task</button>
+    </form>
+    <button (click)="displayTasks()" class="display-tasks-btn">Display Saved Tasks</button>
+    <ul class="task-list">
+      <li *ngFor="let task of tasks" class="task-item">
+        <input type="checkbox" [(ngModel)]="task.completed" (change)="toggleTaskCompletion(task)" />
+        <span [class.completed]="task.completed">{{ task.title }}</span>
+        <button (click)="deleteTask(task.id)" class="delete-task-btn">Delete</button>
+      </li>
+    </ul>
+  </div>
+  

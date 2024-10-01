@@ -1,0 +1,15 @@
+<div class="notes">
+    <h3>Notes</h3>
+    <form (submit)="addNote()" class="note-form">
+        <input type="text" [(ngModel)]="newNote.title" placeholder="Note Title" required />
+        <textarea [(ngModel)]="newNote.content" placeholder="Note Content"></textarea>
+        <button type="submit" class="add-note-btn">Add Note</button>
+    </form>
+    <ul class="note-list">
+        <li *ngFor="let note of notes" class="note-item">
+            <h4>{{ note.title }}</h4>
+            <p>{{ note.content }}</p>
+            <button (click)="deleteNote(note.id)" class="delete-note-btn">Delete</button>
+        </li>
+    </ul>
+</div>
