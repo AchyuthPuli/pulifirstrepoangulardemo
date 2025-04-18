@@ -28,7 +28,7 @@ import { NotesComponent } from './notes/notes.component';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule
+  
   ],
   providers: [],
   bootstrap: [AppComponent]
